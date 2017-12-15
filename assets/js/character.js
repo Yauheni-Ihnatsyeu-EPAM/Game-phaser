@@ -32,7 +32,6 @@ class Character extends AbstactItem {
 
         this.body.immovable = true;
         this.body.linearDamping = 1;
-        this.state = {};
         this.initiateAnimations();
         this.movDirectionLeft = false;
 
