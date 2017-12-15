@@ -1,0 +1,13 @@
+{ "columns":9,
+ "image":"..\/map assets\/walls.png",
+ "imageheight":32,
+ "imagewidth":144,
+ "margin":0,
+ "name":"walls",
+ "spacing":0,
+ "tilecount":9,
+ "tileheight":32,
+ "tilewidth":16,
+ "transparentcolor":"#000000",
+ "type":"tileset"
+}

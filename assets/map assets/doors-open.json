@@ -1,0 +1,68 @@
+{"frames": [
+
+{
+	"filename": "compilation 1_1.png",
+	"frame": {"x":0,"y":0,"w":16,"h":48},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":16,"h":48},
+	"sourceSize": {"w":16,"h":48}
+},
+{
+	"filename": "compilation 1_2.png",
+	"frame": {"x":0,"y":48,"w":16,"h":48},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":16,"h":48},
+	"sourceSize": {"w":16,"h":48}
+},
+{
+	"filename": "compilation 1_3.png",
+	"frame": {"x":0,"y":240,"w":16,"h":48},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":16,"h":48},
+	"sourceSize": {"w":16,"h":48}
+},
+{
+	"filename": "compilation 1_4.png",
+	"frame": {"x":0,"y":288,"w":16,"h":48},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":16,"h":48},
+	"sourceSize": {"w":16,"h":48}
+},
+{
+	"filename": "compilation 1_25.png",
+	"frame": {"x":0,"y":96,"w":16,"h":48},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":16,"h":48},
+	"sourceSize": {"w":16,"h":48}
+},
+{
+	"filename": "compilation 1_26.png",
+	"frame": {"x":0,"y":144,"w":16,"h":48},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":16,"h":48},
+	"sourceSize": {"w":16,"h":48}
+},
+{
+	"filename": "compilation 1_27.png",
+	"frame": {"x":0,"y":192,"w":16,"h":48},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":16,"h":48},
+	"sourceSize": {"w":16,"h":48}
+}],
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "doors-open.png",
+	"format": "RGBA8888",
+	"size": {"w":16,"h":336},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:030fb12379b83150ed7a1fa430beab44:c0625bfd8989b35a85b0d6e672c3a9f3:98fe9d6632e7938499165d793c9ab484$"
+}
+}

@@ -1,0 +1,12 @@
+{ "columns":30,
+ "image":"..\/map assets\/dungeons.png",
+ "imageheight":48,
+ "imagewidth":480,
+ "margin":0,
+ "name":"dungeons",
+ "spacing":0,
+ "tilecount":90,
+ "tileheight":16,
+ "tilewidth":16,
+ "type":"tileset"
+}

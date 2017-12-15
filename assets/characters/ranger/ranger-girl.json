@@ -1,0 +1,412 @@
+{"frames": [
+
+{
+	"filename": "ranger-girl_0.png",
+	"frame": {"x":1,"y":391,"w":88,"h":128},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":88,"h":128},
+	"sourceSize": {"w":88,"h":128}
+},
+{
+	"filename": "ranger-girl_1.png",
+	"frame": {"x":95,"y":261,"w":88,"h":128},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":88,"h":128},
+	"sourceSize": {"w":88,"h":128}
+},
+{
+	"filename": "ranger-girl_2.png",
+	"frame": {"x":95,"y":261,"w":88,"h":128},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":88,"h":128},
+	"sourceSize": {"w":88,"h":128}
+},
+{
+	"filename": "ranger-girl_3.png",
+	"frame": {"x":91,"y":651,"w":84,"h":128},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":84,"h":128},
+	"sourceSize": {"w":84,"h":128}
+},
+{
+	"filename": "ranger-girl_4.png",
+	"frame": {"x":181,"y":518,"w":84,"h":128},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":84,"h":128},
+	"sourceSize": {"w":84,"h":128}
+},
+{
+	"filename": "ranger-girl_5.png",
+	"frame": {"x":181,"y":518,"w":84,"h":128},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":84,"h":128},
+	"sourceSize": {"w":84,"h":128}
+},
+{
+	"filename": "ranger-girl_6.png",
+	"frame": {"x":181,"y":518,"w":84,"h":128},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":84,"h":128},
+	"sourceSize": {"w":84,"h":128}
+},
+{
+	"filename": "ranger-girl_7.png",
+	"frame": {"x":91,"y":651,"w":84,"h":128},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":84,"h":128},
+	"sourceSize": {"w":84,"h":128}
+},
+{
+	"filename": "ranger-girl_8.png",
+	"frame": {"x":1,"y":391,"w":88,"h":128},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":88,"h":128},
+	"sourceSize": {"w":88,"h":128}
+},
+{
+	"filename": "ranger-girl_9.png",
+	"frame": {"x":1,"y":391,"w":88,"h":128},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":88,"h":128},
+	"sourceSize": {"w":88,"h":128}
+},
+{
+	"filename": "ranger-girl_10.png",
+	"frame": {"x":1,"y":391,"w":88,"h":128},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":88,"h":128},
+	"sourceSize": {"w":88,"h":128}
+},
+{
+	"filename": "ranger-girl_11.png",
+	"frame": {"x":197,"y":131,"w":88,"h":128},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":88,"h":128},
+	"sourceSize": {"w":88,"h":128}
+},
+{
+	"filename": "ranger-girl_12.png",
+	"frame": {"x":291,"y":1,"w":88,"h":128},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":88,"h":128},
+	"sourceSize": {"w":88,"h":128}
+},
+{
+	"filename": "ranger-girl_13.png",
+	"frame": {"x":365,"y":261,"w":84,"h":125},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":3,"w":84,"h":125},
+	"sourceSize": {"w":84,"h":128}
+},
+{
+	"filename": "ranger-girl_14.png",
+	"frame": {"x":271,"y":391,"w":84,"h":125},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":3,"w":84,"h":125},
+	"sourceSize": {"w":84,"h":128}
+},
+{
+	"filename": "ranger-girl_15.png",
+	"frame": {"x":267,"y":518,"w":84,"h":125},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":3,"w":84,"h":125},
+	"sourceSize": {"w":84,"h":128}
+},
+{
+	"filename": "ranger-girl_16.png",
+	"frame": {"x":357,"y":388,"w":84,"h":125},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":3,"w":84,"h":125},
+	"sourceSize": {"w":84,"h":128}
+},
+{
+	"filename": "ranger-girl_17.png",
+	"frame": {"x":267,"y":518,"w":84,"h":125},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":3,"w":84,"h":125},
+	"sourceSize": {"w":84,"h":128}
+},
+{
+	"filename": "ranger-girl_18.png",
+	"frame": {"x":181,"y":391,"w":88,"h":125},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":3,"w":88,"h":125},
+	"sourceSize": {"w":88,"h":128}
+},
+{
+	"filename": "ranger-girl_19.png",
+	"frame": {"x":197,"y":131,"w":88,"h":128},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":88,"h":128},
+	"sourceSize": {"w":88,"h":128}
+},
+{
+	"filename": "ranger-girl_20.png",
+	"frame": {"x":103,"y":1,"w":92,"h":128},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":92,"h":128},
+	"sourceSize": {"w":92,"h":128}
+},
+{
+	"filename": "ranger-girl_21.png",
+	"frame": {"x":1,"y":261,"w":92,"h":128},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":92,"h":128},
+	"sourceSize": {"w":92,"h":128}
+},
+{
+	"filename": "ranger-girl_22.png",
+	"frame": {"x":103,"y":131,"w":92,"h":128},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":92,"h":128},
+	"sourceSize": {"w":92,"h":128}
+},
+{
+	"filename": "ranger-girl_23.png",
+	"frame": {"x":1,"y":521,"w":88,"h":128},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":88,"h":128},
+	"sourceSize": {"w":88,"h":128}
+},
+{
+	"filename": "ranger-girl_24.png",
+	"frame": {"x":177,"y":651,"w":84,"h":125},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":3,"w":84,"h":125},
+	"sourceSize": {"w":84,"h":128}
+},
+{
+	"filename": "ranger-girl_25.png",
+	"frame": {"x":1,"y":781,"w":84,"h":128},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":84,"h":128},
+	"sourceSize": {"w":84,"h":128}
+},
+{
+	"filename": "ranger-girl_26.png",
+	"frame": {"x":197,"y":1,"w":92,"h":128},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":92,"h":128},
+	"sourceSize": {"w":92,"h":128}
+},
+{
+	"filename": "ranger-girl_27.png",
+	"frame": {"x":91,"y":391,"w":88,"h":128},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":88,"h":128},
+	"sourceSize": {"w":88,"h":128}
+},
+{
+	"filename": "ranger-girl_28.png",
+	"frame": {"x":185,"y":261,"w":88,"h":128},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":88,"h":128},
+	"sourceSize": {"w":88,"h":128}
+},
+{
+	"filename": "ranger-girl_29.png",
+	"frame": {"x":275,"y":261,"w":88,"h":125},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":3,"w":88,"h":125},
+	"sourceSize": {"w":88,"h":128}
+},
+{
+	"filename": "ranger-girl_30.png",
+	"frame": {"x":287,"y":131,"w":88,"h":128},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":88,"h":128},
+	"sourceSize": {"w":88,"h":128}
+},
+{
+	"filename": "ranger-girl_31.png",
+	"frame": {"x":173,"y":781,"w":84,"h":125},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":3,"w":84,"h":125},
+	"sourceSize": {"w":84,"h":128}
+},
+{
+	"filename": "ranger-girl_32.png",
+	"frame": {"x":353,"y":518,"w":76,"h":125},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":3,"w":76,"h":125},
+	"sourceSize": {"w":76,"h":128}
+},
+{
+	"filename": "ranger-girl_33.png",
+	"frame": {"x":263,"y":648,"w":80,"h":125},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":3,"w":80,"h":125},
+	"sourceSize": {"w":80,"h":128}
+},
+{
+	"filename": "ranger-girl_34.png",
+	"frame": {"x":1,"y":651,"w":88,"h":128},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":88,"h":128},
+	"sourceSize": {"w":88,"h":128}
+},
+{
+	"filename": "ranger-girl_35.png",
+	"frame": {"x":1,"y":1,"w":100,"h":128},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":128},
+	"sourceSize": {"w":100,"h":128}
+},
+{
+	"filename": "ranger-girl_36.png",
+	"frame": {"x":1,"y":131,"w":100,"h":128},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":100,"h":128},
+	"sourceSize": {"w":100,"h":128}
+},
+{
+	"filename": "ranger-girl_37.png",
+	"frame": {"x":91,"y":521,"w":88,"h":128},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":88,"h":128},
+	"sourceSize": {"w":88,"h":128}
+},
+{
+	"filename": "ranger-girl_38.png",
+	"frame": {"x":381,"y":1,"w":76,"h":128},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":76,"h":128},
+	"sourceSize": {"w":76,"h":128}
+},
+{
+	"filename": "ranger-girl_39.png",
+	"frame": {"x":377,"y":131,"w":80,"h":128},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":80,"h":128},
+	"sourceSize": {"w":80,"h":128}
+},
+{
+	"filename": "ranger-girl_40.png",
+	"frame": {"x":1,"y":391,"w":88,"h":128},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":88,"h":128},
+	"sourceSize": {"w":88,"h":128}
+},
+{
+	"filename": "ranger-girl_41.png",
+	"frame": {"x":87,"y":781,"w":84,"h":128},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":84,"h":128},
+	"sourceSize": {"w":84,"h":128}
+},
+{
+	"filename": "ranger-girl_42.png",
+	"frame": {"x":345,"y":645,"w":84,"h":125},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":3,"w":84,"h":125},
+	"sourceSize": {"w":84,"h":128}
+},
+{
+	"filename": "ranger-girl_43.png",
+	"frame": {"x":259,"y":778,"w":92,"h":117},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":11,"w":92,"h":117},
+	"sourceSize": {"w":92,"h":128}
+},
+{
+	"filename": "ranger-girl_44.png",
+	"frame": {"x":353,"y":772,"w":92,"h":105},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":23,"w":92,"h":105},
+	"sourceSize": {"w":92,"h":128}
+},
+{
+	"filename": "ranger-girl_45.png",
+	"frame": {"x":353,"y":879,"w":96,"h":97},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":31,"w":96,"h":97},
+	"sourceSize": {"w":96,"h":128}
+},
+{
+	"filename": "ranger-girl_46.png",
+	"frame": {"x":1,"y":911,"w":100,"h":85},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":43,"w":100,"h":85},
+	"sourceSize": {"w":100,"h":128}
+},
+{
+	"filename": "ranger-girl_47.png",
+	"frame": {"x":103,"y":911,"w":100,"h":73},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":55,"w":100,"h":73},
+	"sourceSize": {"w":100,"h":128}
+},
+{
+	"filename": "ranger-girl_48.png",
+	"frame": {"x":205,"y":908,"w":104,"h":53},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":75,"w":104,"h":53},
+	"sourceSize": {"w":104,"h":128}
+},
+{
+	"filename": "ranger-girl_49.png",
+	"frame": {"x":205,"y":963,"w":108,"h":25},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":103,"w":108,"h":25},
+	"sourceSize": {"w":108,"h":128}
+}],
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "ranger-girl.png",
+	"format": "RGBA8888",
+	"size": {"w":458,"h":997},
+	"scale": "4",
+	"smartupdate": "$TexturePacker:SmartUpdate:fa91e6f811d1392253ef43ca4487641f:28aa83ada6f4945d0b651e417fafdcd0:4e220989ef60efce2f342821bb4580cd$"
+}
+}

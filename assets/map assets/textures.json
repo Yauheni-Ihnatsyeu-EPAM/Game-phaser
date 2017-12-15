@@ -1,0 +1,36 @@
+{"frames": [
+
+{
+	"filename": "celling.png",
+	"frame": {"x":480,"y":32,"w":16,"h":16},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":16,"h":16},
+	"sourceSize": {"w":16,"h":16}
+},
+{
+	"filename": "dungeons.png",
+	"frame": {"x":0,"y":0,"w":480,"h":48},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":480,"h":48},
+	"sourceSize": {"w":480,"h":48}
+},
+{
+	"filename": "walls.png",
+	"frame": {"x":480,"y":0,"w":144,"h":32},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":144,"h":32},
+	"sourceSize": {"w":144,"h":32}
+}],
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "textures.png",
+	"format": "RGBA8888",
+	"size": {"w":624,"h":48},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:53e07e6b9f7f046d50d15b99fbe3ba4b:0b3405a33d8831beab770504e9364abd:cf827d152df04949dfee256cd0c8efd8$"
+}
+}
