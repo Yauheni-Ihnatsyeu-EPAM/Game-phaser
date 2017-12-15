@@ -197,10 +197,10 @@ function touchCelling() {
 function render() {
 
 
-    game.debug.bodyInfo(player, 32, 320);
-    game.debug.body(player.hitArea);
-    game.debug.body(sceleton.hitArea);
-    game.debug.body(sceleton);
+    // game.debug.bodyInfo(player, 32, 320);
+    // game.debug.body(player.hitArea);
+    // game.debug.body(sceleton.hitArea);
+    // game.debug.body(sceleton);
     //dungeon.debug = true;
 
 }
