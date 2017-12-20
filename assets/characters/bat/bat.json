@@ -1,0 +1,412 @@
+{"frames": [
+
+{
+	"filename": "bat spritesheet calciumtrice_0.png",
+	"frame": {"x":79,"y":21,"w":18,"h":8},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":18,"h":8},
+	"sourceSize": {"w":18,"h":8}
+},
+{
+	"filename": "bat spritesheet calciumtrice_1.png",
+	"frame": {"x":42,"y":38,"w":16,"h":10},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":16,"h":10},
+	"sourceSize": {"w":16,"h":10}
+},
+{
+	"filename": "bat spritesheet calciumtrice_2.png",
+	"frame": {"x":13,"y":49,"w":12,"h":11},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":12,"h":11},
+	"sourceSize": {"w":12,"h":11}
+},
+{
+	"filename": "bat spritesheet calciumtrice_3.png",
+	"frame": {"x":99,"y":38,"w":14,"h":11},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":14,"h":11},
+	"sourceSize": {"w":14,"h":11}
+},
+{
+	"filename": "bat spritesheet calciumtrice_4.png",
+	"frame": {"x":72,"y":29,"w":18,"h":9},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":18,"h":9},
+	"sourceSize": {"w":18,"h":9}
+},
+{
+	"filename": "bat spritesheet calciumtrice_5.png",
+	"frame": {"x":34,"y":13,"w":20,"h":8},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":20,"h":8},
+	"sourceSize": {"w":20,"h":8}
+},
+{
+	"filename": "bat spritesheet calciumtrice_6.png",
+	"frame": {"x":69,"y":6,"w":21,"h":7},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":21,"h":7},
+	"sourceSize": {"w":21,"h":7}
+},
+{
+	"filename": "bat spritesheet calciumtrice_7.png",
+	"frame": {"x":17,"y":13,"w":17,"h":7},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":17,"h":7},
+	"sourceSize": {"w":17,"h":7}
+},
+{
+	"filename": "bat spritesheet calciumtrice_8.png",
+	"frame": {"x":0,"y":13,"w":17,"h":7},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":17,"h":7},
+	"sourceSize": {"w":17,"h":7}
+},
+{
+	"filename": "bat spritesheet calciumtrice_9.png",
+	"frame": {"x":0,"y":21,"w":19,"h":8},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":19,"h":8},
+	"sourceSize": {"w":19,"h":8}
+},
+{
+	"filename": "bat spritesheet calciumtrice_10.png",
+	"frame": {"x":97,"y":21,"w":18,"h":8},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":18,"h":8},
+	"sourceSize": {"w":18,"h":8}
+},
+{
+	"filename": "bat spritesheet calciumtrice_11.png",
+	"frame": {"x":90,"y":6,"w":19,"h":7},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":19,"h":7},
+	"sourceSize": {"w":19,"h":7}
+},
+{
+	"filename": "bat spritesheet calciumtrice_12.png",
+	"frame": {"x":60,"y":21,"w":19,"h":8},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":19,"h":8},
+	"sourceSize": {"w":19,"h":8}
+},
+{
+	"filename": "bat spritesheet calciumtrice_13.png",
+	"frame": {"x":0,"y":49,"w":13,"h":11},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":13,"h":11},
+	"sourceSize": {"w":13,"h":11}
+},
+{
+	"filename": "bat spritesheet calciumtrice_14.png",
+	"frame": {"x":106,"y":29,"w":19,"h":9},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":19,"h":9},
+	"sourceSize": {"w":19,"h":9}
+},
+{
+	"filename": "bat spritesheet calciumtrice_15.png",
+	"frame": {"x":19,"y":21,"w":21,"h":8},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":21,"h":8},
+	"sourceSize": {"w":21,"h":8}
+},
+{
+	"filename": "bat spritesheet calciumtrice_16.png",
+	"frame": {"x":72,"y":0,"w":20,"h":6},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":20,"h":6},
+	"sourceSize": {"w":20,"h":6}
+},
+{
+	"filename": "bat spritesheet calciumtrice_17.png",
+	"frame": {"x":0,"y":6,"w":20,"h":6},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":20,"h":6},
+	"sourceSize": {"w":20,"h":6}
+},
+{
+	"filename": "bat spritesheet calciumtrice_18.png",
+	"frame": {"x":40,"y":21,"w":20,"h":8},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":20,"h":8},
+	"sourceSize": {"w":20,"h":8}
+},
+{
+	"filename": "bat spritesheet calciumtrice_19.png",
+	"frame": {"x":0,"y":29,"w":20,"h":8},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":20,"h":8},
+	"sourceSize": {"w":20,"h":8}
+},
+{
+	"filename": "bat spritesheet calciumtrice_20.png",
+	"frame": {"x":40,"y":6,"w":18,"h":7},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":18,"h":7},
+	"sourceSize": {"w":18,"h":7}
+},
+{
+	"filename": "bat spritesheet calciumtrice_21.png",
+	"frame": {"x":90,"y":29,"w":16,"h":9},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":16,"h":9},
+	"sourceSize": {"w":16,"h":9}
+},
+{
+	"filename": "bat spritesheet calciumtrice_22.png",
+	"frame": {"x":58,"y":38,"w":12,"h":10},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":12,"h":10},
+	"sourceSize": {"w":12,"h":10}
+},
+{
+	"filename": "bat spritesheet calciumtrice_23.png",
+	"frame": {"x":28,"y":38,"w":14,"h":10},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":14,"h":10},
+	"sourceSize": {"w":14,"h":10}
+},
+{
+	"filename": "bat spritesheet calciumtrice_24.png",
+	"frame": {"x":20,"y":29,"w":18,"h":8},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":18,"h":8},
+	"sourceSize": {"w":18,"h":8}
+},
+{
+	"filename": "bat spritesheet calciumtrice_25.png",
+	"frame": {"x":20,"y":6,"w":20,"h":7},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":20,"h":7},
+	"sourceSize": {"w":20,"h":7}
+},
+{
+	"filename": "bat spritesheet calciumtrice_26.png",
+	"frame": {"x":34,"y":0,"w":21,"h":5},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":21,"h":5},
+	"sourceSize": {"w":21,"h":5}
+},
+{
+	"filename": "bat spritesheet calciumtrice_27.png",
+	"frame": {"x":55,"y":0,"w":17,"h":5},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":17,"h":5},
+	"sourceSize": {"w":17,"h":5}
+},
+{
+	"filename": "bat spritesheet calciumtrice_28.png",
+	"frame": {"x":17,"y":0,"w":17,"h":5},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":17,"h":5},
+	"sourceSize": {"w":17,"h":5}
+},
+{
+	"filename": "bat spritesheet calciumtrice_29.png",
+	"frame": {"x":109,"y":0,"w":19,"h":6},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":19,"h":6},
+	"sourceSize": {"w":19,"h":6}
+},
+{
+	"filename": "bat spritesheet calciumtrice_30.png",
+	"frame": {"x":54,"y":13,"w":18,"h":8},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":18,"h":8},
+	"sourceSize": {"w":18,"h":8}
+},
+{
+	"filename": "bat spritesheet calciumtrice_31.png",
+	"frame": {"x":0,"y":38,"w":18,"h":9},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":18,"h":9},
+	"sourceSize": {"w":18,"h":9}
+},
+{
+	"filename": "bat spritesheet calciumtrice_32.png",
+	"frame": {"x":25,"y":49,"w":15,"h":12},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":15,"h":12},
+	"sourceSize": {"w":15,"h":12}
+},
+{
+	"filename": "bat spritesheet calciumtrice_33.png",
+	"frame": {"x":67,"y":49,"w":13,"h":13},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":13,"h":13},
+	"sourceSize": {"w":13,"h":13}
+},
+{
+	"filename": "bat spritesheet calciumtrice_34.png",
+	"frame": {"x":80,"y":49,"w":11,"h":14},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":11,"h":14},
+	"sourceSize": {"w":11,"h":14}
+},
+{
+	"filename": "bat spritesheet calciumtrice_35.png",
+	"frame": {"x":91,"y":49,"w":12,"h":15},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":12,"h":15},
+	"sourceSize": {"w":12,"h":15}
+},
+{
+	"filename": "bat spritesheet calciumtrice_36.png",
+	"frame": {"x":50,"y":49,"w":17,"h":12},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":17,"h":12},
+	"sourceSize": {"w":17,"h":12}
+},
+{
+	"filename": "bat spritesheet calciumtrice_37.png",
+	"frame": {"x":70,"y":38,"w":18,"h":10},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":18,"h":10},
+	"sourceSize": {"w":18,"h":10}
+},
+{
+	"filename": "bat spritesheet calciumtrice_38.png",
+	"frame": {"x":56,"y":29,"w":16,"h":9},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":16,"h":9},
+	"sourceSize": {"w":16,"h":9}
+},
+{
+	"filename": "bat spritesheet calciumtrice_39.png",
+	"frame": {"x":72,"y":13,"w":20,"h":8},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":20,"h":8},
+	"sourceSize": {"w":20,"h":8}
+},
+{
+	"filename": "bat spritesheet calciumtrice_40.png",
+	"frame": {"x":92,"y":13,"w":18,"h":8},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":18,"h":8},
+	"sourceSize": {"w":18,"h":8}
+},
+{
+	"filename": "bat spritesheet calciumtrice_41.png",
+	"frame": {"x":38,"y":29,"w":18,"h":9},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":18,"h":9},
+	"sourceSize": {"w":18,"h":9}
+},
+{
+	"filename": "bat spritesheet calciumtrice_42.png",
+	"frame": {"x":113,"y":38,"w":14,"h":11},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":14,"h":11},
+	"sourceSize": {"w":14,"h":11}
+},
+{
+	"filename": "bat spritesheet calciumtrice_43.png",
+	"frame": {"x":88,"y":38,"w":11,"h":10},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":11,"h":10},
+	"sourceSize": {"w":11,"h":10}
+},
+{
+	"filename": "bat spritesheet calciumtrice_44.png",
+	"frame": {"x":40,"y":49,"w":10,"h":12},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":10,"h":12},
+	"sourceSize": {"w":10,"h":12}
+},
+{
+	"filename": "bat spritesheet calciumtrice_45.png",
+	"frame": {"x":18,"y":38,"w":10,"h":10},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":10,"h":10},
+	"sourceSize": {"w":10,"h":10}
+},
+{
+	"filename": "bat spritesheet calciumtrice_46.png",
+	"frame": {"x":58,"y":6,"w":11,"h":7},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":11,"h":7},
+	"sourceSize": {"w":11,"h":7}
+},
+{
+	"filename": "bat spritesheet calciumtrice_47.png",
+	"frame": {"x":109,"y":6,"w":15,"h":7},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":15,"h":7},
+	"sourceSize": {"w":15,"h":7}
+},
+{
+	"filename": "bat spritesheet calciumtrice_48.png",
+	"frame": {"x":92,"y":0,"w":17,"h":6},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":17,"h":6},
+	"sourceSize": {"w":17,"h":6}
+},
+{
+	"filename": "bat spritesheet calciumtrice_49.png",
+	"frame": {"x":0,"y":0,"w":17,"h":4},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":17,"h":4},
+	"sourceSize": {"w":17,"h":4}
+}],
+"meta": {
+	"app": "http://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "bat.png",
+	"format": "RGBA8888",
+	"size": {"w":128,"h":64},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:4acc70c22bcef4431ed742c649f3fa18:fec0476ef5b4d12c5ea4b60202b480cf:7701fa4d77073f039a4bfcba279ca81e$"
+}
+}

@@ -11,7 +11,7 @@ class Character extends AbstactItem {
 
         // Set up speed values
         this.speed = opts.speed || 150;
-        this.scale.set(opts.scale || 0.25, opts.scale || 0.25);
+        this.scale.set(opts.scale || 2, opts.scale || 2);
         this.smoothed = false;
         //  this.anchor.setTo(0.5);
         // Set up controls
@@ -30,7 +30,7 @@ class Character extends AbstactItem {
         this.anchor.x = 0.5;
         this.anchor.y = 0.5;
 
-        this.body.immovable = true;
+        // this.body.immovable = true;
         this.body.linearDamping = 1;
         this.initiateAnimations();
         this.movDirectionLeft = false;
@@ -117,8 +117,11 @@ class Character extends AbstactItem {
         else if (this.attackState === "readyToHit") {
             this.attackState = "attack";
             this.animations.play("attack", 10);
-        } else if (this.attackState === "attack") {
-            if (this.animations.currentFrame.index == 39) {
+        }
+        if (this.attackState === "attack") {
+            this.body.velocity.x = 0;
+            this.body.velocity.y = 0;
+            if (this.animations.currentAnim.currentFrame.index >= 35 && this.animations.currentAnim.currentFrame.index <= 39) {
 
                 if (this.hitTarger)
                     this.game.physics.arcade.overlap(this.hitArea, this.hitTarger, this.calcHit(this.hitTarger));
@@ -130,13 +133,17 @@ class Character extends AbstactItem {
                 this.attackState = "rest";
                 return;
             }
-        } else if (this.attackState === "rest") {
+
+        }
+
+        if (this.attackState === "rest") {
             this.attackState = "none";
             setTimeout(() => { this.attackState = "readyToHit"; }, 1000);
         }
         //attackState = { attack: false, rest: false, readyToHit: true };
     }
     calcHit(target) {
+
         target.health = target.health - Math.round(Math.random() * 100) % 40;
     }
 

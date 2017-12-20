@@ -11,10 +11,15 @@ function preload() {
     game.load.image('textures-full', './assets/map assets/textures.png');
     game.load.atlasJSONHash('flags-statues', './assets/map assets/flags-statues.png', './assets/map assets/flags-statues.json');
     game.load.atlasJSONHash('others-items', './assets/map assets/other.png', './assets/map assets/other.json');
+    game.load.atlasJSONHash('doors-open', './assets/map assets/doors-open.png', './assets/map assets/doors-open.json');
+    game.load.atlasJSONHash('doors-fences', './assets/map assets/doors-fences.png', './assets/map assets/doors-fences.json');
+    game.load.atlasJSONHash('items', './assets/map assets/items-all.png', './assets/map assets/items-all.json');
     game.load.atlasJSONHash('goblin', './assets/characters/goblin/goblin.png', './assets/characters/goblin/goblin.json');
     game.load.atlasJSONHash('ranger-girl', './assets/characters/ranger/ranger-girl.png', './assets/characters/ranger/ranger-girl.json');
     game.load.atlasJSONHash('warrior-girl', './assets/characters/warrior/warrior-girl.png', './assets/characters/warrior/warrior-girl.json');
     game.load.atlasJSONHash('sceleton-enemy', './assets/characters/sceleton/sceleton.png', './assets/characters/sceleton/sceleton.json');
+    game.load.atlasJSONHash('bat-enemy', './assets/characters/bat/bat.png', './assets/characters/bat/bat.json');
+    game.load.atlasJSONHash('rat-enemy', './assets/characters/rat/rat.png', './assets/characters/rat/rat.json');
     game.load.tilemap('mario', 'assets/levels/super_mario.json', null, Phaser.Tilemap.TILED_JSON);
 
     //  Next we load the tileset. This is just an image, loaded in via the normal way we load images:
@@ -24,6 +29,8 @@ var player;
 var sceletons;
 var cursors;
 
+var goblin;
+
 var stars;
 var score = 0;
 var scoreText;
@@ -31,6 +38,11 @@ var scoreText;
 var map;
 var dungeon;
 var celling;
+var items;
+var potions;
+var doors;
+var rat;
+var doorOpened = false;
 
 function create() {
     //  We're going to be using physics, so enable the Arcade Physics system
@@ -59,6 +71,8 @@ function create() {
 
     map.addTilesetImage('textures', 'textures-full');
     map.addTilesetImage('other', 'others-items');
+
+
     dungeon = map.createLayer('dungeon-level');
     dungeon.smoothed = false;
     dungeon.setScale(2, 2);
@@ -83,13 +97,32 @@ function create() {
     tourches.callAll('animations.play', 'animations', 'flame');
 
 
+    items = game.add.group();
+    items.enableBody = true;
+    items.scale.x = 2;
+    items.scale.y = 2;
+
+    map.createFromObjects('items', "health-potion", 'items', 3, true, false, items);
+    map.createFromObjects('items', "diminishing-potion", 'items', 7, true, false, items);
+    map.createFromObjects('items', "lever", 'others-items', 11, true, false, items);
     flags = game.add.group();
     flags.enableBody = true;
     flags.scale.x = 2;
     flags.scale.y = 2;
 
-    map.createFromObjects('items', 956, 'flags-statues', 5, true, false, flags);
+    map.createFromObjects('items', 956, 'flags-statues', 7, true, false, flags);
     map.createFromObjects('items', 953, 'flags-statues', 10, true, false, flags);
+
+    doors = game.add.group();
+    doors.enableBody = true;
+    doors.scale.x = 2;
+    doors.scale.y = 2;
+
+    map.createFromObjects('items', "door-closed", 'doors-fences', 0, true, false, doors);
+    doors.children[0].body.immovable = true;
+    doors.children[0].body.setSize(32, 16);
+
+
 
 
 
@@ -128,8 +161,37 @@ function create() {
         characterType: "bot",
         width: 19,
         height: 32,
-        scale: 2
+        scale: 2,
     }));
+
+    rat = this.game.add.existing(SpriteFactory.createCharacter({
+        y: 800,
+        x: 500,
+        game: this.game,
+        key: 'rat-enemy',
+        collideWorldBounds: true,
+        health: 1,
+        characterType: "bot",
+        width: 19,
+        height: 32,
+        scale: 1,
+        scaleReversed: true
+    }));
+
+    goblin = this.game.add.existing(SpriteFactory.createCharacter({
+        y: 900,
+        x: 500,
+        game: this.game,
+        key: 'goblin',
+        collideWorldBounds: true,
+        health: 1,
+        characterType: "bot",
+        width: 19,
+        height: 32,
+        scale: 0.5,
+    }));
+
+
 
 
 
@@ -144,9 +206,12 @@ function create() {
         characterType: "player",
         width: 19,
         height: 32,
-        scale: 2,
-
+        scale: 2
     }));
+
+
+
+
 
 
     // p = this.game.add.existing(SpriteFactory.createCharacter({
@@ -157,7 +222,7 @@ function create() {
     //     controls: false,
     //     collideWorldBounds: true,
     //     health: 100,
-    //     characterType: "bot"
+    //     characterType: "npc"
     // }));
     // p.anchor.x = 0.5;
     // p.anchor.y = 0.5;
@@ -176,33 +241,56 @@ function update() {
 
     //  Collide the player and the stars with the platforms
     game.physics.arcade.collide(player, dungeon);
-    game.physics.arcade.collide(sceleton, dungeon, sceleton.changeDirection);
+    game.physics.arcade.collide(sceleton, dungeon, sceleton.changeDirection.bind(sceleton));
+
+
     game.physics.arcade.collide(sceleton, player);
+    game.physics.arcade.collide(doors, player);
     game.physics.arcade.overlap(sceleton.hitArea, player, tryToAttack);
     game.physics.arcade.overlap(player.hitArea, sceleton, tryToAttack);
+    game.physics.arcade.overlap(items, player, itemsFunction);
+
 
 }
 
 function tryToAttack(attackerHitArea, target) {
     attackerHitArea.parent.hitTarger = target;
-    if (attackerHitArea.parent.characterType !== "player")
+    if (attackerHitArea.parent.characterType == "bot")
         attackerHitArea.parent.attack(target); //тупая функция
 }
 
-function touchCelling() {
-    console.log("aazzzzaaa");
+function itemsFunction(source, target) {
+    if (target.name === "health-potion") {
+        source.health = 100;
+        target.kill();
+    } else if (target.name === "diminishing-potion") {
+        console.log("reducing");
+        source.scale.set(target.scale.x * 1, target.scale.y * 1);
+        source.body.setSize(target.body.width * 1, target.body.height * 1);
+        target.kill();
+    } else if (target.name === "lever" && !doorOpened) {
+        console.log("lever");
+        target.frame = 12;
+        doors.children[0].kill();
+        map.createFromObjects('items', "door-open", 'doors-open', 0, true, false, doors);
+        doors.children[0].body.immovable = true;
+        doorOpened = true;
+    }
 }
 
+function log() {
+    console.log("azzaza");
+}
 
 function render() {
 
-
-    // game.debug.bodyInfo(player, 32, 320);
-    // game.debug.body(player.hitArea);
-    // game.debug.body(sceleton.hitArea);
-    // game.debug.body(sceleton);
+    game.debug.bodyInfo(player, 32, 320);
+    game.debug.body(player);
+    game.debug.body(player.hitArea);
+    game.debug.body(sceleton.hitArea);
+    game.debug.body(sceleton);
+    game.debug.body(doors.children[0]);
     //dungeon.debug = true;
-
 }
 
 function gofull() {

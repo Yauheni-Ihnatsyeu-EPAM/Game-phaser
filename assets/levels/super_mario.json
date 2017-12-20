@@ -93,7 +93,7 @@
                  "id":15,
                  "name":"",
                  "rotation":0,
-                 "type":"",
+                 "type":"torch",
                  "visible":true,
                  "width":16,
                  "x":223.625,
@@ -187,13 +187,13 @@
                  "gid":129,
                  "height":16,
                  "id":34,
-                 "name":"",
+                 "name":"lever",
                  "rotation":0,
                  "type":"",
                  "visible":true,
                  "width":16,
-                 "x":431.333333333333,
-                 "y":349.333333333333
+                 "x":527.333333333333,
+                 "y":352
                 }, 
                 {
                  "gid":124,
@@ -271,7 +271,7 @@
                  "gid":137,
                  "height":16,
                  "id":41,
-                 "name":"",
+                 "name":"health-potion",
                  "rotation":0,
                  "type":"",
                  "visible":true,
@@ -280,19 +280,19 @@
                  "y":352.666666666667
                 }, 
                 {
-                 "gid":943,
+                 "gid":191,
                  "height":32,
                  "id":42,
-                 "name":"",
+                 "name":"door-closed",
                  "rotation":0,
                  "type":"",
                  "visible":true,
                  "width":16,
-                 "x":144.181818181818,
-                 "y":320.636363636364
+                 "x":143.877470355731,
+                 "y":317.549407114625
                 }, 
                 {
-                 "gid":953,
+                 "gid":201,
                  "height":32,
                  "id":46,
                  "name":"",
@@ -304,7 +304,7 @@
                  "y":415
                 }, 
                 {
-                 "gid":956,
+                 "gid":204,
                  "height":32,
                  "id":47,
                  "name":"",
@@ -316,7 +316,7 @@
                  "y":320.333333333333
                 }, 
                 {
-                 "gid":956,
+                 "gid":204,
                  "height":32,
                  "id":48,
                  "name":"",
@@ -328,7 +328,7 @@
                  "y":320
                 }, 
                 {
-                 "gid":956,
+                 "gid":204,
                  "height":32,
                  "id":49,
                  "name":"",
@@ -374,6 +374,30 @@
                  "width":16,
                  "x":80,
                  "y":415.25
+                }, 
+                {
+                 "gid":141,
+                 "height":16,
+                 "id":54,
+                 "name":"diminishing-potion",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":110,
+                 "y":357.333333333334
+                }, 
+                {
+                 "gid":184,
+                 "height":48,
+                 "id":56,
+                 "name":"door-open",
+                 "rotation":0,
+                 "type":"",
+                 "visible":true,
+                 "width":16,
+                 "x":136,
+                 "y":336
                 }],
          "opacity":1,
          "type":"objectgroup",
@@ -381,7 +405,7 @@
          "x":0,
          "y":0
         }],
- "nextobjectid":53,
+ "nextobjectid":59,
  "orientation":"orthogonal",
  "renderorder":"left-up",
  "tiledversion":"1.0.3",
@@ -483,6 +507,20 @@
          "spacing":0,
          "tilecount":18,
          "tileheight":16,
+         "tileproperties":
+            {
+             "14":
+                {
+                 "item-type":"torch"
+                }
+            },
+         "tilepropertytypes":
+            {
+             "14":
+                {
+                 "item-type":"string"
+                }
+            },
          "tiles":
             {
              "0":
@@ -503,7 +541,7 @@
                 },
              "14":
                 {
-                 "type":"touch"
+                 "type":"torch"
                 },
              "2":
                 {
@@ -515,19 +553,19 @@
         {
          "columns":48,
          "firstgid":136,
-         "image":"..\/map assets\/items-all.png.png",
+         "image":"..\/map assets\/items-all.png",
          "imageheight":16,
          "imagewidth":768,
          "margin":0,
          "name":"items-all.png",
          "spacing":0,
-         "tilecount":800,
+         "tilecount":48,
          "tileheight":16,
          "tilewidth":16
         }, 
         {
          "columns":1,
-         "firstgid":936,
+         "firstgid":184,
          "image":"..\/map assets\/doors-open.png",
          "imageheight":336,
          "imagewidth":16,
@@ -540,7 +578,7 @@
         }, 
         {
          "columns":6,
-         "firstgid":943,
+         "firstgid":191,
          "image":"..\/map assets\/doors-fences.png",
          "imageheight":32,
          "imagewidth":96,
@@ -553,7 +591,7 @@
         }, 
         {
          "columns":1,
-         "firstgid":949,
+         "firstgid":197,
          "image":"..\/map assets\/flags-statues.png",
          "imageheight":384,
          "imagewidth":16,

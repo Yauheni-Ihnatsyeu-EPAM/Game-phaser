@@ -4,7 +4,7 @@ class Player extends Character {
         this.cursors = this.game.input.keyboard.createCursorKeys();
         this.setUpKeyListeners();
         this.characterType = "player";
-        this.body.immovable = true;
+
 
         var barConfig = {
             width: 200,
@@ -68,7 +68,7 @@ class Player extends Character {
         this.calcSpeed();
     }
     calculateStates() {
-        if (this.animations.currentAnim.name == "attack") {
+        if (this.animations.currentAnim.name == "attack" && this.attackState === "attack") {
             this.attack();
             if (!this.animations.currentAnim.isFinished) return;
         }
@@ -80,7 +80,8 @@ class Player extends Character {
             //         this.animations.play("gesture", 10);
             //     }
             // if (!this.animations.currentAnim.name == "gesture") {
-            this.animations.play("idle", 10);
+            if (this.attackState !== "attack")
+                this.animations.play("idle", 10);
             // }
         }
         if (this.spaceKey.isDown) {
