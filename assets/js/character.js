@@ -143,8 +143,8 @@ class Character extends AbstactItem {
         //attackState = { attack: false, rest: false, readyToHit: true };
     }
     calcHit(target) {
-
         target.health = target.health - Math.round(Math.random() * 100) % 40;
+        if (target.health <= 0 && target.characterType === "bot") changeScore(target);
     }
 
 }

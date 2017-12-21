@@ -14,7 +14,7 @@ class Bot extends Character {
     move(animSpeed = 10) {
         if (this.state === "dead") return;
 
-        this.animations.play("walk", animSpeed);
+
         if (this.attackState === "none") {
             this.body.velocity.x = 0;
             this.body.velocity.y = 0;
@@ -24,31 +24,14 @@ class Bot extends Character {
         if (this.patrol === "X")
             this.XAxisPatrol();
         else if (this.patrol === "Y")
-            this.XAxisPatrol();
-
-
-        //if not see player
-
+            this.YAxisPatrol();
+        if (this.animations.currentAnim.name !== "walk" && this.animations.currentAnim.name !== "death") {
+            this.animations.play("idle", 10);
+            //if not see player
+        }
         //this.calcSpeed();
     }
-    changeDirection() { //collide wall
-        if (this.state === "dirChanged") return;
 
-        else {
-
-            if (this.movingLeft) { //inverse direction
-                this.body.velocity.x = -80;
-                this.changeScale(!this.movingLeft);
-                this.hitArea.scale.x = Math.abs(this.scale.x) * (-1);
-            } else {
-                this.body.velocity.x = 80;
-                this.changeScale(!this.movingLeft);
-                this.hitArea.scale.x = Math.abs(this.scale.x);
-            }
-            this.movingLeft = !this.movingLeft;
-            this.state = "dirChanged";
-        }
-    }
 
     collideplayer() {
         this.state = "collidePlayer";
@@ -96,6 +79,7 @@ class Bot extends Character {
                 this.changed = false;
 
             }
+            this.animations.play("walk", 10);
         }
     }
     YAxisPatrol() {
@@ -117,6 +101,7 @@ class Bot extends Character {
                 this.changed = false;
 
             }
+            this.animations.play("walk", 10);
         }
     }
     XAxisChaise() {
@@ -135,6 +120,7 @@ class Bot extends Character {
                 this.body.velocity.x = -200;
             }
             this.state = "chaising";
+            this.animations.play("walk", 10);
         } else {
             this.state = "patrolling";
         }
@@ -155,6 +141,7 @@ class Bot extends Character {
                 this.body.velocity.y = -150;
             }
             this.state = "chaising";
+            this.animations.play("walk", 10);
         } else {
             this.state = "patrolling";
         }

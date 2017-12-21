@@ -1,4 +1,4 @@
-var game = new Phaser.Game(800, 600, Phaser.AUTO, '', {
+var game = new Phaser.Game(1024, 800, Phaser.AUTO, 'canvas', {
     preload: preload,
     create: create,
     update: update,
@@ -27,12 +27,10 @@ function preload() {
 
 var player;
 var enemies;
-var enemiesHitZones;
-var cursors;
-
+var rat;
 var goblin;
 
-var stars;
+
 var score = 0;
 var scoreText;
 
@@ -42,8 +40,10 @@ var celling;
 var items;
 var potions;
 var doors;
-var rat;
+
 var doorOpened = false;
+
+
 
 function create() {
     //  We're going to be using physics, so enable the Arcade Physics system
@@ -126,29 +126,11 @@ function create() {
 
     dungeon.resizeWorld();
 
-
-
-    //  Finally some stars to collect
-
-
-    //  We will enable physics for any star that is created in this group
-
-
-    //  Here we'll create 12 of them evenly spaced apart
-
-    //  The score
-
-    //  Our controls.
-    cursors = game.input.keyboard.createCursorKeys();
-
-
-
-    // player.anchor.x = 0.5;
-    // player.anchor.y = 0.5;
+    scoreText = game.add.text(0, 0, 'score: 0', { fontSize: '32px', fill: '#FFFF' });
+    scoreText.fixedToCamera = true;
+    scoreText.cameraOffset.setTo(100, 570);
 
     enemies = game.add.group();
-    enemiesHitZones = game.add.group();
-
     sceleton = this.game.add.existing(SpriteFactory.createCharacter({
         y: 700,
         x: 500,
@@ -157,48 +139,45 @@ function create() {
         collideWorldBounds: true,
         health: 1,
         characterType: "bot",
-        width: 19,
+        width: 32,
         height: 32,
         scale: 2,
         patrol: "X"
     }));
 
     enemies.add(sceleton);
-    enemiesHitZones.add(sceleton.hitArea);
 
     rat = this.game.add.existing(SpriteFactory.createCharacter({
-        y: 300,
-        x: 400,
+        y: 200,
+        x: 600,
         game: this.game,
         key: 'rat-enemy',
         collideWorldBounds: true,
         health: 1,
         characterType: "bot",
         width: 19,
-        height: 32,
+        height: 20,
         scale: 1,
         scaleReversed: true,
         patrol: "Y"
     }));
 
     enemies.add(rat);
-    enemiesHitZones.add(rat.hitArea);
 
     goblin = this.game.add.existing(SpriteFactory.createCharacter({
-        y: 900,
-        x: 500,
+        y: 700,
+        x: 1000,
         game: this.game,
         key: 'goblin',
         collideWorldBounds: true,
         health: 1,
         characterType: "bot",
-        width: 19,
-        height: 32,
+        width: 70,
+        height: 70,
         scale: 0.5,
     }));
 
     enemies.add(goblin);
-    enemiesHitZones.add(goblin.hitArea);
 
 
     player = this.game.add.existing(SpriteFactory.createCharacter({
@@ -215,30 +194,7 @@ function create() {
         scale: 2
     }));
 
-
-
-
-
-
-    // p = this.game.add.existing(SpriteFactory.createCharacter({
-    //     y: 210,
-    //     x: 100,
-    //     game: this.game,
-    //     key: 'ranger-girl',
-    //     controls: false,
-    //     collideWorldBounds: true,
-    //     health: 100,
-    //     characterType: "npc"
-    // }));
-    // p.anchor.x = 0.5;
-    // p.anchor.y = 0.5;
-
-
-
-
     game.physics.enable(player);
-    // game.physics.enable(p);
-
 
     game.camera.follow(player);
 }
@@ -247,22 +203,43 @@ function update() {
 
     //  Collide the player and the stars with the platforms
     game.physics.arcade.collide(player, dungeon);
-    game.physics.arcade.collide(sceleton, dungeon, sceleton.changeDirection.bind(sceleton));
+    game.physics.arcade.collide(enemies, dungeon, changeDirection);
 
 
     game.physics.arcade.collide(enemies, player);
     game.physics.arcade.collide(doors, player);
-    game.physics.arcade.overlap(enemiesHitZones, player, tryToAttack);
-    game.physics.arcade.overlap(player.hitArea, enemies, tryToAttack);
+    game.physics.arcade.overlap(enemies, player, tryToAttack);
+
     game.physics.arcade.overlap(items, player, itemsFunction);
 
 
 }
 
-function tryToAttack(attackerHitArea, target) {
-    attackerHitArea.parent.hitTarger = target;
-    if (attackerHitArea.parent.characterType == "bot")
-        attackerHitArea.parent.attack(target); //тупая функция
+function changeDirection(bot) { //collide wall
+    if (bot.state === "dirChanged") return;
+    else {
+
+        if (bot.movingLeft) { //inverse direction
+            bot.body.velocity.x = -80;
+            bot.changeScale(!bot.movingLeft);
+            bot.hitArea.scale.x = Math.abs(bot.scale.x) * (-1);
+        } else {
+            bot.body.velocity.x = 80;
+            bot.changeScale(!bot.movingLeft);
+            bot.hitArea.scale.x = Math.abs(bot.scale.x);
+        }
+        bot.movingLeft = !bot.movingLeft;
+        bot.state = "dirChanged";
+    }
+}
+
+
+function tryToAttack(player, bot) {
+    player.hitTarger = bot;
+    bot.hitTarger = player;
+
+    bot.attack(player); //тупая функция
+
 }
 
 function itemsFunction(source, target) {
@@ -291,13 +268,13 @@ function log() {
 }
 
 function render() {
-
-    game.debug.bodyInfo(player, 32, 320);
-    game.debug.body(player);
-    game.debug.body(player.hitArea);
-    game.debug.body(sceleton.hitArea);
-    game.debug.body(sceleton);
-    game.debug.body(doors.children[0]);
+    // game.debug.bodyInfo(player, 32, 320);
+    // game.debug.body(player);
+    // game.debug.body(player.hitArea);
+    // game.debug.body(goblin);
+    // game.debug.body(rat);
+    // game.debug.body(sceleton);
+    // game.debug.body(doors.children[0]);
     //dungeon.debug = true;
 }
 
@@ -308,5 +285,18 @@ function gofull() {
     } else {
         game.scale.startFullScreen(false);
     }
+}
+
+function changeScore(bot) {
+
+    // Removes the star from the screen
+    if (bot.key === "sceleton-enemy") { score += 70; } else if (bot.key === "goblin") {
+        score += 45;
+    } else if (bot.key === "rat-enemy") {
+        score += 10;
+    }
+    //  Add and update the score
+
+    scoreText.text = 'Score: ' + score;
 
 }
