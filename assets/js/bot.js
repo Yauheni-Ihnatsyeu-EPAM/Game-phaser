@@ -5,9 +5,11 @@ class Bot extends Character {
         this.changed = true;
         this.changeDir = false;
         this.movingLeft = false;
+        this.movingUp = false;
         this.characterType = "bot";
         this.body.immovable = true;
-        this.scaleReversed = opts.scaleReversed || false
+        this.scaleReversed = opts.scaleReversed || false;
+        this.patrol = opts.patrol;
     }
     move(animSpeed = 10) {
         if (this.state === "dead") return;
@@ -17,55 +19,19 @@ class Bot extends Character {
             this.body.velocity.x = 0;
             this.body.velocity.y = 0;
         }
+        this.YAxisChaise();
+        this.XAxisChaise();
+        if (this.patrol === "X")
+            this.XAxisPatrol();
+        else if (this.patrol === "Y")
+            this.XAxisPatrol();
 
 
-
-        //if see player
-        if (Math.round(this.y) - 50 < Math.round(player.y) && Math.round(this.y) + 50 > Math.round(player.y)) {
-            if (this.attackState !== "readyToHit" && this.attackState !== "attack") {
-                return
-            }
-            if (Math.round(player.x) > Math.round(this.x)) {
-                this.hitArea.scale.x = Math.abs(this.scale.x);
-                this.changeScale(!this.movingLeft)
-                this.body.velocity.x = 200;
-            } else {
-                this.scale.x = Math.abs(this.scale.x) * (-1);
-                this.changeScale(!this.movingLeft)
-                this.body.velocity.x = -200;
-            }
-
-            this.state = "chaising";
-        } else {
-            this.state = "patrolling";
-        }
         //if not see player
-        if (this.state !== "chaising") { //patrolling
 
-            if (this.movingLeft) {
-                this.body.velocity.x = 80;
-                this.changeScale(this.movingLeft)
-                this.hitArea.scale.x = Math.abs(this.scale.x);
-            } else {
-                this.body.velocity.x = -80;
-                this.changeScale(this.movingLeft)
-                this.hitArea.scale.x = Math.abs(this.scale.x) * (-1);
-
-            }
-            if (this.changed) {
-                setTimeout(() => {
-                    this.movingLeft = !this.movingLeft;
-                    this.changed = true;
-                }, 4000);
-                this.changed = false;
-
-            }
-        }
         //this.calcSpeed();
     }
     changeDirection() { //collide wall
-        //collide wall
-
         if (this.state === "dirChanged") return;
 
         else {
@@ -83,6 +49,7 @@ class Bot extends Character {
             this.state = "dirChanged";
         }
     }
+
     collideplayer() {
         this.state = "collidePlayer";
         this.body.velocity.x = 0;
@@ -107,6 +74,89 @@ class Bot extends Character {
                 this.scale.x = Math.abs(this.scale.x) * (-1);
             else
                 this.scale.x = Math.abs(this.scale.x);
+        }
+    }
+    XAxisPatrol() {
+        if (this.state !== "chaising") { //patrolling
+            if (this.movingLeft) {
+                this.body.velocity.x = 80;
+                this.changeScale(this.movingLeft)
+                this.hitArea.scale.x = Math.abs(this.scale.x);
+            } else {
+                this.body.velocity.x = -80;
+                this.changeScale(this.movingLeft)
+                this.hitArea.scale.x = Math.abs(this.scale.x) * (-1);
+
+            }
+            if (this.changed) {
+                setTimeout(() => {
+                    this.movingLeft = !this.movingLeft;
+                    this.changed = true;
+                }, 4000);
+                this.changed = false;
+
+            }
+        }
+    }
+    YAxisPatrol() {
+        if (this.state !== "chaising") { //patrolling
+            if (this.movingUp) {
+                this.body.velocity.y = 80;
+                this.changeScale(this.movingUp)
+                this.hitArea.scale.x = Math.abs(this.scale.x);
+            } else {
+                this.body.velocity.y = -80;
+                this.changeScale(this.movingUp)
+                this.hitArea.scale.x = Math.abs(this.scale.x) * (-1);
+            }
+            if (this.changed) {
+                setTimeout(() => {
+                    this.movingUp = !this.movingUp;
+                    this.changed = true;
+                }, 4000);
+                this.changed = false;
+
+            }
+        }
+    }
+    XAxisChaise() {
+        //if see player
+        if (Math.round(this.y) - 50 < Math.round(player.y) && Math.round(this.y) + 50 > Math.round(player.y)) {
+            if (this.attackState !== "readyToHit" && this.attackState !== "attack") {
+                return
+            }
+            if (Math.round(player.x) > Math.round(this.x)) {
+                this.hitArea.scale.x = Math.abs(this.scale.x);
+                this.changeScale(true)
+                this.body.velocity.x = 200;
+            } else {
+                this.hitArea.scale.x = Math.abs(this.scale.x) * (-1);
+                this.changeScale(false)
+                this.body.velocity.x = -200;
+            }
+            this.state = "chaising";
+        } else {
+            this.state = "patrolling";
+        }
+    }
+    YAxisChaise() {
+        if (Math.round(this.x) - 50 < Math.round(player.x) && Math.round(this.x) + 50 > Math.round(player.x)) {
+            if (this.attackState !== "readyToHit" && this.attackState !== "attack") {
+                return
+            }
+            if (Math.round(player.y) > Math.round(this.y)) {
+                this.hitArea.scale.x = Math.abs(this.scale.x);
+                this.changeScale(true)
+                this.body.velocity.y = 150;
+            } else {
+                this.scale.x = Math.abs(this.scale.x) * (-1);
+                this.hitArea.scale.x = Math.abs(this.scale.x) * (-1);
+                this.changeScale(false)
+                this.body.velocity.y = -150;
+            }
+            this.state = "chaising";
+        } else {
+            this.state = "patrolling";
         }
     }
 

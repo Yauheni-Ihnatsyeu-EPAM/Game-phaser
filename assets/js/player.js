@@ -4,7 +4,7 @@ class Player extends Character {
         this.cursors = this.game.input.keyboard.createCursorKeys();
         this.setUpKeyListeners();
         this.characterType = "player";
-
+        this.body.immovable = true;
 
         var barConfig = {
             width: 200,
@@ -49,17 +49,19 @@ class Player extends Character {
 
         // vertical movement
         if (this.cursors.up.isDown) {
-            this.scale.x = Math.abs(this.scale.x) * (-1);
-            this.hitArea.scale.x = Math.abs(this.scale.x) * (-1);
 
+            this.scale.x = Math.abs(this.scale.x);
+            this.hitArea.scale.x = Math.abs(this.scale.x);
 
             this.body.velocity.y = -1;
 
             this.animations.play("walk", animSpeed);
         } else if (this.cursors.down.isDown) {
             this.body.velocity.y = 1;
-            this.scale.x = Math.abs(this.scale.x);
-            this.hitArea.scale.x = Math.abs(this.scale.x);
+
+
+            this.scale.x = Math.abs(this.scale.x) * (-1);
+            this.hitArea.scale.x = Math.abs(this.scale.x) * (-1);
             this.animations.play("walk", animSpeed);
         } else {
             this.body.velocity.y = 0;

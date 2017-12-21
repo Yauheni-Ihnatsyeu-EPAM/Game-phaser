@@ -26,7 +26,8 @@ function preload() {
 }
 
 var player;
-var sceletons;
+var enemies;
+var enemiesHitZones;
 var cursors;
 
 var goblin;
@@ -123,9 +124,6 @@ function create() {
     doors.children[0].body.setSize(32, 16);
 
 
-
-
-
     dungeon.resizeWorld();
 
 
@@ -148,8 +146,8 @@ function create() {
     // player.anchor.x = 0.5;
     // player.anchor.y = 0.5;
 
-    sceletons = game.add.group();
-
+    enemies = game.add.group();
+    enemiesHitZones = game.add.group();
 
     sceleton = this.game.add.existing(SpriteFactory.createCharacter({
         y: 700,
@@ -162,11 +160,15 @@ function create() {
         width: 19,
         height: 32,
         scale: 2,
+        patrol: "X"
     }));
 
+    enemies.add(sceleton);
+    enemiesHitZones.add(sceleton.hitArea);
+
     rat = this.game.add.existing(SpriteFactory.createCharacter({
-        y: 800,
-        x: 500,
+        y: 300,
+        x: 400,
         game: this.game,
         key: 'rat-enemy',
         collideWorldBounds: true,
@@ -175,8 +177,12 @@ function create() {
         width: 19,
         height: 32,
         scale: 1,
-        scaleReversed: true
+        scaleReversed: true,
+        patrol: "Y"
     }));
+
+    enemies.add(rat);
+    enemiesHitZones.add(rat.hitArea);
 
     goblin = this.game.add.existing(SpriteFactory.createCharacter({
         y: 900,
@@ -191,8 +197,8 @@ function create() {
         scale: 0.5,
     }));
 
-
-
+    enemies.add(goblin);
+    enemiesHitZones.add(goblin.hitArea);
 
 
     player = this.game.add.existing(SpriteFactory.createCharacter({
@@ -244,10 +250,10 @@ function update() {
     game.physics.arcade.collide(sceleton, dungeon, sceleton.changeDirection.bind(sceleton));
 
 
-    game.physics.arcade.collide(sceleton, player);
+    game.physics.arcade.collide(enemies, player);
     game.physics.arcade.collide(doors, player);
-    game.physics.arcade.overlap(sceleton.hitArea, player, tryToAttack);
-    game.physics.arcade.overlap(player.hitArea, sceleton, tryToAttack);
+    game.physics.arcade.overlap(enemiesHitZones, player, tryToAttack);
+    game.physics.arcade.overlap(player.hitArea, enemies, tryToAttack);
     game.physics.arcade.overlap(items, player, itemsFunction);
 
 
@@ -273,7 +279,9 @@ function itemsFunction(source, target) {
         target.frame = 12;
         doors.children[0].kill();
         map.createFromObjects('items', "door-open", 'doors-open', 0, true, false, doors);
-        doors.children[0].body.immovable = true;
+        doors.children[0].body.setSize(0, 0);
+        doors.children[1].body.immovable = true;
+        doors.children[1].body.setSize(10, 48);
         doorOpened = true;
     }
 }
